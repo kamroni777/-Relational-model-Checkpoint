@@ -1,0 +1,31 @@
+Hotel
+
+Hotel (Hotel_id [PK], Hotel_name)  
+
+Room
+
+Room (Room_id [PK], Floor, Hotel_id [FK])  
+
+Type
+
+Type (Type_id [PK], Type_name)  
+
+Category
+
+Category (Category_id [PK], Category_name, Price, Beds_numbers) 
+
+Employee
+
+Employee (Employee_id [PK], Employee_name, Employee_specialty)  
+
+Room_Type (Resolves M:N between Room and Type)
+
+Room_Type (Room_id [FK], Type_id [FK], [Additional attributes if needed])  
+
+Room_Category (Resolves M:N between Room and Category)
+
+Room_Category (Room_id [FK], Category_id [FK], [Additional attributes if needed])  
+
+Hotel_Employee (Resolves M:N between Hotel and Employee)
+
+Hotel_Employee (Hotel_id [FK], Employee_id [FK], [Additional attributes like role])
